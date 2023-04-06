@@ -19,11 +19,16 @@ import android.util.Log;
 public class Restaurantes extends AppCompatActivity {
     private TextInputLayout textInputLayout;
     ActivityRestaurantesBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_restaurantes);
         binding = ActivityRestaurantesBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
+
+        Log.d("com.example.nearyou","hola");
 
         List<Restaurante> restaurantes = new ArrayList<>();
         restaurantes.add(new Restaurante("Restaurante 1", Arrays.asList("Pizza", "Ensalada", "Hamburguesa")));
@@ -33,6 +38,7 @@ public class Restaurantes extends AppCompatActivity {
         binding.btnBuscarRest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d("com.example.nearyou","mundo");
                 String userInput = binding.txtInput.getText().toString();
                 List<Restaurante> restaurantesPorComida = Restaurante.buscarRestaurantesPorComida(restaurantes,userInput);
                 //Log.d("Lista restaurantes: ", restaurantesPorComida.get(0).toString());
