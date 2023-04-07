@@ -25,8 +25,6 @@ public class Restaurantes extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         binding = ActivityRestaurantesBinding.inflate(getLayoutInflater());
-        View view = binding.getRoot();
-        setContentView(view);
 
         Log.d("com.example.nearyou","hola");
 
