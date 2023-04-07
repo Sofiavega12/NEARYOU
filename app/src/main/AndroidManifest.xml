@@ -18,6 +18,9 @@
         android:theme="@style/Theme.NEARYOU"
         tools:targetApi="31">
         <activity
+            android:name=".OpcionesActivity"
+            android:exported="false" />
+        <activity
             android:name=".Restaurantes"
             android:exported="false" />
         <!--
